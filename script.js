@@ -52,7 +52,7 @@
     var items = [];
     grid.querySelectorAll('.art-card').forEach(function(card){
       var img = card.querySelector('img');
-      items.push({ src: img.src, alt: img.alt });
+      items.push({ src: img.getAttribute('data-full') || img.src, alt: img.alt });
     });
     categories[cat] = items;
     // attach click handlers
